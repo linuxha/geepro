@@ -1,0 +1,126 @@
+
+<!ENTITY % position
+    'expand  (true|false) "false"
+    fill     (true|false) "false"
+    box_end  (true|false) "false"
+    border   CDATA #IMPLIED
+    expandx  (true|false) "false"
+    expandy  (true|false) "false"
+    fillx    (true|false) "false"
+    filly    (true|false) "false"
+    spacex   CDATA #IMPLIED
+    spacey   CDATA #IMPLIED
+    pos      CDATA #IMPLIED'
+>
+
+<!ELEMENT gui (info, notebook?)>
+<!ELEMENT info ANY>
+<!ELEMENT notebook ANY>
+
+<!ELEMENT if ANY>
+<!ELEMENT frame ANY>
+<!ELEMENT table ANY>
+<!ELEMENT dipswitch EMPTY>
+<!ELEMENT jumper EMPTY>
+<!ELEMENT image EMPTY>
+<!ELEMENT label EMPTY>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT button EMPTY>
+<!ELEMENT chbutton EMPTY>
+<!ELEMENT spinbutton EMPTY>
+<!ELEMENT entry EMPTY>
+<!ELEMENT hbox ANY>
+<!ELEMENT vbox ANY>
+
+
+<!ATTLIST notebook 
+    name CDATA #REQUIRED
+>
+
+<!ATTLIST if 
+    chip CDATA #IMPLIED
+    family CDATA #IMPLIED
+    programmer CDATA #IMPLIED
+>
+
+<!ATTLIST frame 
+    label CDATA #IMPLIED
+    align CDATA #IMPLIED
+    shadow (in|out|etched_in|etched_out|none) "in"
+    %position;
+>
+
+<!ATTLIST table 
+    dim CDATA #REQUIRED
+    equal (false|true) "false"
+    %position;
+>
+
+<!ATTLIST dipswitch 
+    name CDATA	#IMPLIED
+    len  CDATA  #REQUIRED
+    value CDATA #REQUIRED
+    reversed (false|true) "false"
+    %position;
+>
+
+<!ATTLIST jumper 
+    set (0 | 1) "0"
+    name_up CDATA #IMPLIED
+    name_dn CDATA #IMPLIED
+    %position;
+>
+
+<!ATTLIST button 
+    id ID #REQUIRED
+    sensitive (false | true) "true"
+    label CDATA #REQUIRED
+    %position;
+>
+
+<!ATTLIST chbutton 
+    id ID #REQUIRED
+    sensitive (false | true) "true"
+    place (right|left) "left"
+    label CDATA #REQUIRED
+    %position;
+>
+
+<!ATTLIST spinbutton 
+    id ID #REQUIRED
+    type (hex | dec) "dec"
+    max CDATA #REQUIRED
+    size CDATA #IMPLIED
+    sensitive (false | true) "true"
+    %position;
+>
+
+<!ATTLIST entry 
+    id ID #REQUIRED
+    sensitive (false | true) "true"
+    editable (false | true) "true"
+    size CDATA #IMPLIED
+    %position;
+>
+
+<!ATTLIST image 
+    src CDATA #REQUIRED
+    %position;
+>
+
+
+<!ATTLIST hbox
+    %position;
+    spacing CDATA #IMPLIED
+>
+
+<!ATTLIST vbox
+    spacing CDATA #IMPLIED
+    %position;
+>
+
+<!ATTLIST label
+    text CDATA #REQUIRED
+    align CDATA #IMPLIED
+    %position;
+>

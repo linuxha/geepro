@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# drivers
+def build(bld):
+  print('→ building drivers')
+  drivers_base=["jtag_noname","willem","stk200","galblast","altera_byteblaster","xilinx_cable_iii","altera_byteblaster","funprog"]
+
+  for driver in drivers_base:
+    b=bld(
+      features = 'cxx cxxshlib',
+      source = driver+'.cpp',
+      target=driver,
+      uselib  = 'CXX',
+      includes= '#',
+      install_path = "${PREFIX}/lib/geepro/drivers"
+    ).env.cxxshlib_PATTERN       = '%s.driver'
+
+  bld.install_files("${PREFIX}/share/geepro/drivers",
+    ['drivers.dtd','drivers.css','willem.xml','stk200.xml','xilinx_cable_iii.xml', 'altera_byteblaster.xml', 'jtag_noname.xml', 'galblast.xml','funprog.xml'])
+
+  bld.copy_to_build(geefile='willem.xml')
+  bld.copy_to_build(geefile='funprog.xml')
+  bld.copy_to_build(geefile='stk200.xml')
+  bld.copy_to_build(geefile='xilinx_cable_iii.xml')
+  bld.copy_to_build(geefile='altera_byteblaster.xml')
+  bld.copy_to_build(geefile='jtag_noname.xml')
+  bld.copy_to_build(geefile='galblast.xml')
+  bld.copy_to_build(geefile='drivers.dtd')
+  bld.copy_to_build(geefile='drivers.css')
+
+  #obj=bld(
+  #  features = 'subst',
+  #  install_path = "${PREFIX}/share/geepro/drivers",
+  #  source = 'willem.xml.in',
+  #  target = 'willem.xml',
+  #  SHARE_PATH = bld.env.PREFIX+'/share/geepro')
+  #obj.env.table.update({'SHARE_PATH': bld.env.PREFIX+'/share/geepro'})

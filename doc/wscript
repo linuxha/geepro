@@ -1,0 +1,4 @@
+# -*- coding: utf-8 -*-
+# doc
+def build(bld):
+  print('→ building doc')

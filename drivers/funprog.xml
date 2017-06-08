@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="drivers.css" ?>
+<!DOCTYPE gui SYSTEM "drivers.dtd">
+
+<gui>
+
+<info>
+    <frame align="50, 50" >
+	<vbox>
+	    <description>Very simple SPI programmer for AVR ATMega 8515/ATTiny 90S2313</description>
+	    <image src="pixmaps/phoenix_funcard.jpg"/>
+	</vbox>
+    </frame>
+</info>
+
+<notebook name="HW Test">
+    <table dim="2,2">
+	<frame  shadow="etched_in" expand="true" fillx="true" pos="0,1, 0,1">
+	    <table dim="6, 3" fillx="true">
+		<chbutton id="VCC" pos="0,2, 0,1" label="40-VCC" fillx="true" spacex="5" />
+		<chbutton id="MOSI" pos="0,2, 1,2" label="6-MOSI" fillx="true" spacex="5" />
+		<chbutton id="RST" pos="0,2, 2,3" label="9-RST" fillx="true" spacex="5" spacey="5" />		
+		<chbutton id="SCK" pos="0,2, 3,4" label="8-SCK" fillx="true" spacex="5" spacey="5" />		
+		<chbutton id="XTAL" pos="0,2, 4,5" label="19-XTAL1" fillx="true" spacex="5" spacey="5" />		
+		<entry id="MISO" editable="false" pos="0,1, 5,6" fillx="false" spacex="5" size="5"/>
+		<button label="7-MISO" pos="1,2, 5,6" fillx="true" id="MISO_BT"/>
+		<label text="SET" pos="2,3, 0,1" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 1,2" fillx="true" align="0, 0" spacex="10" />				
+		<label text="SET" pos="2,3, 2,3" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 3,4" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 4,5" fillx="true" align="0, 0" spacex="10" />		
+		<label text="GET" pos="2,3, 5,6" fillx="true" align="0, 0" spacex="10" />
+	    </table>	    
+	</frame>
+	<image src="pixmaps/funprog_sch.jpg" pos="0,2, 1,2"/>
+    </table>
+</notebook>
+
+</gui>
+
+

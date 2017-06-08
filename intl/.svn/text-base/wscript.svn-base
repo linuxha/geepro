@@ -1,0 +1,8 @@
+def build(bld):
+  print('→ building intl')
+  bld(
+    rule   = 'cp ${SRC} ${TGT}',
+    source = 'lang_eng.h',
+    target = 'lang.h',
+    before='c'
+  )

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="drivers.css" ?>
+<!DOCTYPE gui SYSTEM "drivers.dtd">
+
+<gui>
+
+<info>
+    <frame align="50, 50" >
+	<vbox>
+	    <description>GALBLAST</description>
+	    <image src="pixmaps/galblast.jpg"/>
+	</vbox>
+    </frame>
+</info>
+
+<notebook name="HW Test">
+    <hbox>
+	<frame label="Setting">
+	    <vbox>
+		<chbutton id="ON_OFF" label="VCC and VPP" fillx="true" spacex="5" />
+		<table dim="2,2">
+		<frame  shadow="etched_in" expand="true" fillx="true" pos="0,1, 0,1">
+		    <table dim="12, 3" fillx="true">
+			<chbutton id="SDIN" pos="0,2, 0,1" label="SDIN" fillx="true" spacex="5" />
+			<chbutton id="SCLK" pos="0,2, 1,2" label="SCLK" fillx="true" spacex="5" />
+			<chbutton id="STB" pos="0,2, 2,3" label="STB#" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="PV" pos="0,2, 3,4" label="PV" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA0" pos="0,2, 4,5" label="RA0" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA1" pos="0,2, 5,6" label="RA1" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA2" pos="0,2, 6,7" label="RA2" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA3" pos="0,2, 7,8" label="RA3" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA4" pos="0,2, 8,9" label="RA4" fillx="true" spacex="5" spacey="5" />		
+			<chbutton id="RA5" pos="0,2, 9,10" label="RA5" fillx="true" spacex="5" spacey="5" />		
+			<spinbutton id="VOLTAGE" pos="0,2, 10,11" fillx="true" spacex="5" spacey="5" max="255" />				
+			<entry id="SDOUT" editable="false" pos="0,1, 11,12" fillx="false" spacex="5" size="5"/>
+			<button label="SDOUT" pos="1,2, 11,12" fillx="true" id="SDOUT_BT"/>
+			<label text="SET" pos="2,3, 0,1" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 1,2" fillx="true" align="0, 0" spacex="10" />				
+			<label text="SET" pos="2,3, 2,3" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 3,4" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 4,5" fillx="true" align="0, 0" spacex="10" />
+			<label text="SET" pos="2,3, 5,6" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 6,7" fillx="true" align="0, 0" spacex="10" />				
+			<label text="SET" pos="2,3, 7,8" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 8,9" fillx="true" align="0, 0" spacex="10" />		
+			<label text="SET" pos="2,3, 9,10" fillx="true" align="0, 0" spacex="10" />
+			<label text="Vpp Voltage x 10" pos="2,3, 10,11" fillx="true" align="0, 0" spacex="10" />
+			<label text="GET" pos="2,3, 11,12" fillx="true" align="0, 0" spacex="10" />
+		    </table>	    
+		</frame>
+		</table>
+	    </vbox>
+	</frame>
+    <frame label="28 pin socket">
+	<image src="pixmaps/gal26cv12.jpg" />
+    </frame>
+    </hbox>
+</notebook>
+
+</gui>
+
+

@@ -1,0 +1,15 @@
+# gui
+def configure(conf):
+  print('→ configuring gui')
+#  conf.check_cfg(package='gtk+-2.0'  , args='--cflags')
+#  conf.check_cfg(package='cairo'     , args='--cflags')
+#  conf.check_cfg(package='libxml-2.0', args='--cflags')
+
+def build(bld):
+  print('→ building gui')
+  bld(
+  features = 'cxx cxxstlib',
+  source  = ["bineditor.c","gui.c","gui_xml.c","be_panel.c", "be_buffer.c", "be_bitmap.c", "be_asmview.c", "be_stencil.c", "index_stc.c"],
+  target  = 'gui-gtk',
+  uselib  = ['GTK+-3.0','CAIRO','LIBXML-2.0'],
+  includes= '../intl')

@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="drivers.css" ?>
+<!DOCTYPE gui SYSTEM "drivers.dtd">
+
+<gui>
+
+<info>
+    <frame label="Programmer settings" align="50, 50" >
+	<vbox>
+	    <if chip="none">
+		<description>Simple popular programmer.</description>
+		<if programmer="willem_40,willem_pcb3">
+		    <image src="@SHARE_PATH@/pixmaps/willem_40.png"/>
+		</if>
+		<if programmer="willem_pro2">
+		    <image src="@SHARE_PATH@/pixmaps/willem_pro2.jpg"/>
+		</if>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x000000"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="93Cxx">
+		<description>SERIAL MICROWIRE EEPROM.</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_93Cxx.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x0"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="24Cxx">
+		<description>I2C EEPROM.</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_24Cxx.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x0"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27C0xx">
+		<description>EEPROM.</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x636"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+	    <if family="2716">
+		<description>EPROM constant prog pulse 50ms, 2kB</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_2716.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1a3"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="2732">
+		<description>EPROM 4kB </description>
+		<image src="@SHARE_PATH@/pixmaps/willem_2732.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1c0"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="2764_128">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x12b"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27256">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1b3"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27512">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1d4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27C010">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x634"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27C040">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27C080">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xad4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+	    <if family="27C400">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_42pin_eprom.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab6"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="27C322">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_42pin_eprom.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xad4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+
+
+	    <if family="2864_128">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x12b"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="28256">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1b3"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="28512">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_28pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x1d4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="28F010">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0x634"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="28F040">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="28F080">
+		<description>EPROM</description>
+		<image src="@SHARE_PATH@/pixmaps/willem_32pin.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xad4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+
+
+
+
+
+	    <if family="AT89Cxx51">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/mcs51.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="AT89C5x">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/mcs51.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab6"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="i875x">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/mcs51.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab6"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="AT90S20pin">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/mcs51.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab4"/>
+		    </hbox>
+		</vbox>
+	    </if>
+	    <if family="MCS-48">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/mcs48.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab6"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+	    <if family="HUB_LPC">
+		<description>Jakis opis do poprawy.</description>
+		<image src="@SHARE_PATH@/pixmaps/hub_lpc.png"/>
+		<vbox>
+		    <hbox border="0">
+			<jumper name_up="29x" set="0"/>
+			<dipswitch name="Dip switch" len="12" value="0xab6"/>
+		    </hbox>
+		</vbox>
+	    </if>
+
+	</vbox>
+    </frame>
+</info>
+
+<notebook name="HW Test">
+    <table dim="2,3">
+	<frame label="ZIF32" pos="0,1, 0,3" align="50, 0" expandy="true" filly="true" expandx="true" fillx="true">
+	    <hbox>
+		<frame shadow="etched_in">
+		    <vbox>
+			<chbutton id="pin_1"  label="1-Vpp"/>
+			<chbutton id="pin_2"  label="2-A16"/>
+			<chbutton id="pin_3"  label="3-A15"/>
+			<chbutton id="pin_4"  label="4-A12"/>
+			<chbutton id="pin_5"  label="5-A7" />
+			<chbutton id="pin_6"  label="6-A6" />
+			<chbutton id="pin_7"  label="7-A5" />
+			<chbutton id="pin_8"  label="8-A4" />
+			<chbutton id="pin_9"  label="9-A3" />
+			<chbutton id="pin_10" label="10-A2"/>
+			<chbutton id="pin_11" label="11-A1"/>
+			<chbutton id="pin_12" label="12-A0"/>
+			<chbutton id="pin_13" label="13-D0"/>
+			<chbutton id="pin_14" label="14-D1"/>
+			<chbutton id="pin_15" label="15-D2"/>
+			<chbutton id="pin_16" sensitive="false" label="16-GND"/>
+		    </vbox>    
+		</frame>
+		<frame shadow="etched_in">
+		    <vbox>
+			<chbutton id="pin_32" place="right" label="Vcc-32"/>
+			<chbutton id="pin_31" place="right" label="WE-31" />
+			<chbutton id="pin_30" place="right" label="A17-30"/>
+			<chbutton id="pin_29" place="right" label="A14-29"/>
+			<chbutton id="pin_28" place="right" label="A13-28"/>
+			<chbutton id="pin_27" place="right" label="A8-27" />
+			<chbutton id="pin_26" place="right" label="A9-26" />
+			<chbutton id="pin_25" place="right" label="A11-25"/>
+			<chbutton id="pin_24" place="right" label="OE-24" />
+			<chbutton id="pin_23" place="right" label="A10-23"/>
+			<chbutton id="pin_22" place="right" label="CE-22" />
+			<chbutton id="pin_21" place="right" label="D7-21" />
+			<chbutton id="pin_20" place="right" label="D6-20" />
+			<chbutton id="pin_19" place="right" label="D5-19" />
+			<chbutton id="pin_18" place="right" label="D4-18" />
+			<chbutton id="pin_17" place="right" label="D3-17" />
+		    </vbox>
+		</frame>
+	    </hbox>
+	</frame>
+	<frame label="Set Address/Data" align="50, 50" pos="1,2, 0,1" expandx="true" fillx="true" filly="true" spacex="5">
+	    <table dim="2,3">
+	        <spinbutton pos="1,2, 0,1" id="address" type="hex" max="0x3ffff" size="50, 25" fillx="true" expandx="true" spacex="10" />
+	        <label text="Address:" pos="0,1, 0,1" fillx="true" align="0, 0" spacex="10" />
+	        <spinbutton pos="1,2, 1,2" id="data" type="hex" max="0xff" size="50, 25" fillx="true" expandx="true" spacex="10" />
+	        <label text="Data:" pos="0,1, 1,2" fillx="true" align="0, 0" spacex="10" />
+	        <button pos="0,2, 2,3" id="rd_data_bt" label="Read data D0..D7" fillx="true" expandx="true" filly="true" expandy="true" spacey="10" spacex="10"/>
+	    </table>
+	</frame>
+	<frame label="Pamiec 93Cxx" pos="1,2, 1,2" align="50, 50" expandx="true" fillx="true" spacex="5">
+	    <table dim="2,4">
+		<chbutton id="pin_cs" pos="0,1, 0,1" label="1-CS" fillx="true" spacex="5" />
+		<chbutton id="pin_clk" pos="0,1, 1,2" label="2-CLK" fillx="true" spacex="5" />
+		<chbutton id="pin_di" pos="0,1, 2,3" label="3-DI" fillx="true" spacex="5" spacey="5" />
+		<entry id="pin_do_et" editable="false" pos="0,1, 3,4" fillx="true" size="1" spacex="5" />
+		<button id="clk_sqw" pos="1,2, 1,2" label="CLK SQW" expandx="true" fillx="true" spacex="5" />
+		<button id="pin_do_bt" pos="1,2, 3,4" label="4-DO" expandx="true" fillx="true" spacex="5" spacey="5" />
+	    </table>	
+	</frame>
+	<dipswitch name="Dip switch" len="12" value="0xaaaaa" pos="1,2, 2,3" />
+    </table>
+</notebook>
+
+</gui>
+
+

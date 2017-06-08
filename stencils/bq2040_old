@@ -1,0 +1,67 @@
+/*
+    bq2040 example stencil file
+*/
+
+device = {
+    tree = "/Battery charger/bq";
+    description = "Battery charger bq2040 memory map";
+    byte_order = "big endian";
+    name = "bq2040";
+};
+
+memory_map =
+{
+    [0x00]:1 = 0x64;	  // data location
+    [0x01]:1 = 0x5b;	  // integrity check
+    [0x02]:2 = entry[0];  // remainnig time alarm in minutes 
+    [0x04]:2 = entry[1];  // remainnig capacity alarm in mAh
+    [0x06]:2 = nc;	  // reserved
+    [0x08]:2 = entry[2];  // initial charging current [mA]
+    [0x0a]:2 = entry[3];  // charging voltage [mV]
+    [0x0c]:2 = entry[4];  // battery status
+    [0x0e]:2 = entry[5];  // cycle count
+    [0x10]:2 = entry[6];  // design capacity [mAh]
+    [0x12]:2 = entry[7];  // design voltage [mV]    
+    [0x14]:2 = entry[8];  // Programs specyfication Info
+    [0x16]:2 = entry[9];  // Programs manufacture date
+    [0x18]:2 = entry[10]; // Programs serial number
+    [0x1a]:2 = entry[11]; // Charging Current [mA]
+    [0x1c]:2 = entry[12]; // tricle current request [mA]
+    [0x1e]:2 = 0x0000;	  // reserved
+    [0x20]:12 = entry[13]; // manufacturer name
+    [0x2e]:1 = entry[14]; // battery low amount [%]
+    [0x2f]:1 = nc;	  // reserved
+    [0x30]:8 = entry[15]; // device name
+    [0x38]:2 = entry[16]; // Li-Ion taper current [mA]
+    [0x3a]:2 = entry[17]; // max overcharge limit
+    [0x3c]:1 = 0x00;	  // reserved
+    [0x3d]:1 = entry[18]; // access protect
+    [0x3e]:1 = entry[19]; // flags 1    
+    [0x3f]:1 = entry[20]; // flags 2
+    [0x40]:6 = entry[21]; // device chemistry
+    [0x46]:2 = entry[22]; // sense resistor calibration
+    [0x49]:1 = entry[23]; // temperature calibration
+    [0x4a]:1 = entry[24]; // max temp and dT step for dT/dt termination
+    [0x4b]:1 = entry[25]; // charge efficiency
+    [0x4c]:1 = entry[26]; // full charge percentage
+    [0x4d]:1 = entry[27]; // digital filter
+    [0x4e]:1 = entry[28]; // current integration gain
+    [0x4f]:1 = entry[29]; // self discharge rate
+    [0x50]:6 = entry[30]; // manufacturer data
+    [0x56]:2 = entry[31]; // voltage gain1
+    [0x58]:2 = nc;	  // reserved
+    [0x5a]:2 = entry[32]; // EDVF charging current
+    [0x5c]:2 = entry[33]; // EDV1 (end of discharge voltage1)
+    [0x5e]:2 = entry[34]; // EDVF (end of discharge voltage final)
+    [0x60]:2 = entry[35]; // full charge capacity
+    [0x62]:1 = entry[36]; // dt step
+    [0x63]:1 = entry[37]; // hold-off time
+    [0x64]:1 = 0x64;      // data integrity check
+    [0x65]:27 = rsv;	  // reserved
+};
+
+entries = {
+    table = 4, 10; // rows, cols on page
+    
+
+};

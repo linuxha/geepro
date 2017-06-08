@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# pixmaps
+def build(bld):
+  print('→ building pixmaps')
+  pixmaps=["mcs48.png", "mcs51.png", "willem_24Cxx.png", "willem_25Cxx.png", "willem_2716.png", "willem_2732.png", 
+	   "willem_28pin.png", "willem_32pin.png", "willem_40pin_eprom.png", "willem_40.png", "willem_42pin_eprom.png", 
+	   "willem_93Cxx.jpg", "willem_93Cxx.png", "willem_pro2.jpg", "hub_lpc.png", "stk200_sch.jpg", "stk200_pic.jpg", 
+	   "stk200_ph.jpg", "xilinx3_pic.jpg", "xilinx3_sch.jpg", "byteblaster_pic.jpg", "byteblaster_sch.jpg", "jtag_pic.jpg", 
+	   "jtag_sch.jpg", "jtag_noname_ph.jpg", "galblast.jpg", "gal26cv12.jpg", "funprog_sch.jpg","phoenix_funcard.jpg"]
+
+  for pix in pixmaps:
+    bld.copy_to_build(geefile=pix)
+
+  bld.install_files("${PREFIX}/share/geepro/pixmaps",pixmaps)

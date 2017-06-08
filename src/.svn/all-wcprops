@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/geepro/!svn/ver/130/trunk/geepro/src
+END
+protocols.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/protocols.h
+END
+main.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/main.h
+END
+dummy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/124/trunk/geepro/src/dummy.cpp
+END
+parport.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/94/trunk/geepro/src/parport.h
+END
+autors
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/autors
+END
+error.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/152/trunk/geepro/src/error.h
+END
+dummy.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/dummy.h
+END
+checksum.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/geepro/!svn/ver/130/trunk/geepro/src/checksum.cpp
+END
+files.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/148/trunk/geepro/src/files.cpp
+END
+script.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/script.cpp
+END
+checksum.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/130/trunk/geepro/src/checksum.h
+END
+files.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/files.h
+END
+iface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/156/trunk/geepro/src/iface.cpp
+END
+cfp.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/geepro/!svn/ver/154/trunk/geepro/src/cfp.c
+END
+storings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/geepro/!svn/ver/148/trunk/geepro/src/storings.cpp
+END
+script.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/script.h
+END
+buffer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/130/trunk/geepro/src/buffer.cpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/152/trunk/geepro/src/wscript
+END
+iface.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/iface.h
+END
+storings.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/storings.h
+END
+cfp.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svnroot/geepro/!svn/ver/154/trunk/geepro/src/cfp.h
+END
+buffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/buffer.h
+END
+timer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/124/trunk/geepro/src/timer.cpp
+END
+chip.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/124/trunk/geepro/src/chip.cpp
+END
+protocols.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/geepro/!svn/ver/146/trunk/geepro/src/protocols.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/161/trunk/geepro/src/main.cpp
+END
+timer.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/142/trunk/geepro/src/timer.h
+END
+geepro.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/geepro/!svn/ver/156/trunk/geepro/src/geepro.h
+END
+parport.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/124/trunk/geepro/src/parport.cpp
+END
+chip.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/geepro/!svn/ver/128/trunk/geepro/src/chip.h
+END

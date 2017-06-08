@@ -1,0 +1,258 @@
+## $Revision: 1.1.1.1 $
+Krótki przewodnik o tym jak pisaæ modu³y.
+
+W kazdym module musi znale¼æ siê funkcja void init_module(void). Funkcja ta jest wywo³ywana 
+zaraz po do³±czeniu modu³u przez program. Wewn±trz tej funkcji nale¿y umie¶ciæ procedury rejestrujace 
+operacje na uk³adzie scalonym, okre¶la równie¿ typy uk³adów scalonych obs³ugiwanych przez modu³,
+dodaj±c wpisy do menu g³ównego programu. Proces przy³±czenia obs³ugi uk³adu scalonego wygl±da 
+nastêpuj±co:
+
+Wpierw trzeba stworzyæ strukturê typu chip i wype³niæ jej pola, nastêpnie wywo³aæ funkcjê 
+register_chip( &struktura_chip ). Funkcja ta doda nasz± wype³nion± strukturê do kolejki uk³adów
+scalonych w programie. Podczas tej operacji zawarto¶æ struktury jest kopiowana, tak ¿e po jej 
+zarejestrowaniu jest ona zbêdna (mozna j± zwolniæ, lub ponownie wykorzystaæ dla rejestracji kolejnego
+uk³adu).
+
+Schemat kodu mo¿e wygl±daæ tak:
+
+#include "modules.h"
+void init_module(void)
+{
+    chip struktura_chip; /* stworzenie struktury */
+    
+    struktura_chip.chip_path = "/moj_modul";
+    struktura_chip.chip_name = "moj_uklad_1";
+    .....
+    .....
+    register_chip(&struktura_chip);
+
+    /* struktura zosta³a zarejestrowana, wiêc teraz mo¿emy j± wykorzystaæ ponownie */
+    struktura_chip.chip_path = "/moj_modul";
+    struktura_chip.chip_name = "moj_uklad_2";
+    .....
+    .....
+    register_chip(&struktura_chip);
+}
+
+Wszystkie pola struktury powinny byæ wype³nione, je¶li jaka¶ opcja jest niewykorzystana, powinna 
+mieæ warto¶æ 0 lub NULL. Prototyp struktury chip wyglada nastepujaco:
+
+		    typedef struct{
+			    char *chip_path;		
+			    char *chip_name;		
+			    int  sub_id;		
+			    int	 dip_switch;		
+			    void *image_willem;		
+			    void *image_pcb;    	
+			    int  dev_size;		
+			    int  chip_offset;
+			    char *buffer;
+			    int  checksum;
+			    int	 img_will_idx;
+			    int	 img_pcb3_idx;    
+			    char vpp;			
+			    char vcc;			
+			    char vcp;			
+			    int  prog_time;		
+			    void  **option;		
+			    void (*autostart)(void);	
+			    void (*read_chip)(void);    
+			    void (*read_sig_chip)(void);
+			    void (*write_chip)(void);   
+			    void (*erase_chip)(void);	
+			    void (*lock_chip)(void);	
+			    void (*unlock_chip)(void);  
+			    void (*verify_chip)(void);  
+			    void (*test_chip)(void);	
+			    void  *next;		
+		    } chip;
+gdzie:
+
+chip_path  - sciezka podmenu do ukladu, zawsze zaczyna siê od '/', a koñczy nazw±. Szczególnym przypadkiem
+	     jest gdy uklad chcemy umie¶ciæ w g³ównym menu, wówczas ¶cie¿ka zawiera jedynie '/'. Jesli
+	     scie¿ka nie istnieje w menu, zostaje do niego dodana. ¦ciezki z ró¿nych modu³ów mog± siê
+	     pokrywaæ. Przyk³adem ¶cie¿ki mo¿e byæ:
+	     "/", "/mikrokontrolery/AVR/90Sxxxx","/pamieci"
+chip_name  - nazwa ukladu np "D2716D"
+sub_id	   - numer uk³adu w module
+dip_switch - pozycja prze³±czników przy wy¶wietlaniu DIP SWITCH-a
+	        bit 0  - C
+	        bit 1  - B
+	        bit 2  - A
+	        bit 3  - 9
+	        bit 4  - 8
+	        bit 5  - 7
+	        bit 6  - 6
+	        bit 7  - 5
+	        bit 8  - 4
+	        bit 9  - 3
+	        bit 10 - 2
+	        bit 11 - 1
+	        bit 12 - 29x
+image_willem - obrazek przedstawiaj±cy po³ozenie uk³adu dla programatora willem - NULL
+image_pcb    - obrazek przedstawiaj±cy po³ozenie uk³adu dla programatora pcb3 - NULL
+dev_size     - rozmiar pamiêci programowanej
+chip_offset  - przesuniêcie w buforze (ignorowane)
+buffer	     - wewnetrzne wykorzystanie - wska¼nik na bufor, inicjowane na NULL
+checksum     - suma wszystkich bajtów, inicjowane jako 0;
+img_will_idx - indeks obrazka image_willem
+img_pcb3_idx - indeks obrazka image_pcb3
+vpp	     - poziom napiecia programuj±cego (ignorowane na stan obecny)
+vcc 	     - poziom napiêcia zasilaj±cego uk³ad (ignorowane na stan obecny)
+vcp	     - poziom napiêcia zasilaj±cego uk³ad podczas programowania (ignorowane na stan obecny)
+prog_time    - czas impulsu programuj±cego (ignorowane)
+option	     - wtyczka dla struktury uzytkownika, jesli niewykorzystane to NULL
+
+autostart    - funkcja wywo³ywana po wybraniu uk³adu z menu
+read_chip    - funkcja wywo³ywana po naci¶niêciu przycisku "Odczyt uk³adu"
+read_sig_chip- funkcja wywo³ywana po naci¶niêciu przycisku "Odczyt sygnatury"
+write_chip   - funkcja wywo³ywana po naci¶niêciu przycisku "Zapis uk³adu"
+erase_chip   - funkcja wywo³ywana po naci¶niêciu przycisku "Kasowanie uk³adu"
+lock_chip    - funkcja wywo³ywana po naci¶niêciu przycisku "Bity zabezpieczenia"
+unlock_chip  - funkcja wywo³ywana po naci¶niêciu przycisku "Z³amanie zabezpieczeñ"
+verify_chip  - funkcja wywo³ywana po naci¶niêciu przycisku "Weryfikacja z buforem"
+test_chip    - funkcja wywo³ywana po naci¶niêciu przycisku "Test uk³adu" (np czy pamiec skasowano)
+
+next         - wska¼nik na nastêpn± strukturê, przy zainicjowaniu NULL
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+Funkcja autostartu:
+
+Funkcja ta jest wywo³ywana w przypadku wybrania uk³adu scalonego. Jej zadaniem jest zainicjowanie 
+programatora, oraz modyfikacja GUI programu g³ównego (dodanie zak³adek z opcjami i modyfikacja pola
+szybkiej opcji ), Je¶li nie potrzebujemy dodawaæ ¿adnych opcji, mo¿na z niej zrezygnowaæ pozostawiaj±c
+pole autostart w strukturze chip równe NULL. Sposób jej zainicjowania wygl±da nastêpuj±co:
+
+#include "modules.h"
+....
+void autostart_mojego_ukladu()
+{
+/* tutaj wnêtrze autostartu */
+}
+
+void init_module()
+{
+  chip struktura_chip;
+  
+  .....
+  struktura_chip.autostart = autostart_mojego_ukladu; /* przy³±czenie obs³ugi autostart */
+  register_chip(&struktura_chip);
+}
+
+
+
+Rozbudowa GUI:
+
+Po wybraniu uk³adu z menu, program g³ówny czy¶ci wszelkie modyfikacje GUI, oraz zwalnia wszelkie 
+zasoby pamiêci z poprzednich ustawieñ, nastêpnie próbuje wykonaæ autostart.
+
+Mamy 2 mozliwo¶ci modyfikacji GUI:
+a) Modyfikacja pola "szybka opcja", umieszczamy tam najczê¶ciej przestawiane parametry - tak aby by³y
+    "pod rêk±". Do tego s³uzy funkcja fast_option_add()
+b) Dodajemy zak³adki do g³ównego programu, kolejne zak³adki bêd± umieszczane za zak³adk± testowania
+
+Szybka opcja:
+
+W celu umieszczenia nowej kontrolki na polu "Szybka opcja" u¿yjemy funkcji:
+    fast_option_add(kontrolka,etykieta,val,funkcja_zwrotna,parametr_funkcji_zwrotnej,polozenie)
+
+kontrolka       - rodzaj dodawanej kontrolki:
+		    FO_RB_FIRST	- zale¿ny przycisk wyboru, pierwszy
+		    FO_RB_NEXT	- zale¿ny przycisk wyboru, kolejny
+		    FO_LABEL	- etykieta
+		    FO_CHECK	- przycisk wyboru
+		    FO_ENTRY	- pole edycyjne
+etykieta	 - opis kontrolki		    
+val              - warto¶æ pocz±tkowa
+funkcja_zwrotna - funkcja jaka zostanie wywo³ana przy operacji na kontrolce	    
+		  prototypem funkcji jest:
+		  void foo(void *kontrolka, void *parametr)
+parametr        - wska¼nikowy przekazywany parametr do funkcji zwrotnej
+polozenie       - sposób u³o¿enia kontrolki
+		    FO_NONE	- kontrolka umieszczona jako kolejna w pionie
+		    FO_H_FIRST	- kolejne kontrolki bêd± umieszczane poziomo
+		    FO_H_NEXT	- kolejna kontrolka umieszczana poziomo 
+
+Przyk³ad u³o¿enia pionowego:
+    fast_option_add(FO_RB_FIRST,"opcja 1",0,NULL,NULL,FO_NONE);
+    fast_option_add(FO_RB_FIRST,"opcja 2",0,NULL,NULL,FO_NONE);
+
+Przyk³ad u³o¿enia mieszanego:
+    fast_option_add(FO_RB_FIRST,"opcja 1",0,NULL,NULL,FO_H_FIRST);    
+		    fast_option(FO_RB_FIRST,"opcja 2",0,NULL,NULL,FO_H_NEXT);
+    fast_option_add(FO_RB_FIRST,"opcja 3",0,NULL,NULL,FO_H_FIRST);    
+		    fast_option(FO_RB_FIRST,"opcja 4",0,NULL,NULL,FO_H_NEXT);  
+
+Strona konfiguracji:
+    Wpierw trzeba dodaæ stronê:
+	adv_add_page(etykieta)
+	    etykieta - nazwa strony
+    Nastepnie dodajemy kontrolki za pomoc± funkcji adv_option_add(), parametry funkcji te same co dla
+    fast_option_add()
+    Mo¿e istnieæ wiele stron konfiguracji.
+    
+/*************************************************************************************************/
+Funkcje wykonuj±ce akcje na uk³adzie programowanym:
+
+Sposób pod³±czenia funkcji wyglada nastêpuj±co:
+
+#include "modules.h"
+....
+void odczyt_mojego_ukladu()
+{
+...........
+}
+
+void init_module()
+{
+  chip struktura_chip;
+  
+  .....
+  struktura_chip.read_chip = odczyt_mojego_ukladu; /* przy³±czenie obs³ugi odczytu */
+  register_chip(&struktura_chip);
+}
+
+Je¿eli wska¼nik do funkcji w strukturze bêdzie mieæ warto¶æ NULL, to nie zostanie umieszczona
+ikona akcji na pasku narzêdziowym.
+
+/*************************************************************************************************/
+Budowa funkcji obs³ugi akcji na uk³adzie w charakterze GUI
+
+pasek postêpu:
+
+void czytaj()
+{
+    int i;
+    
+    progress_bar_init("pasek postepu", 1024);
+    for(i = 10; i < 1024; i++){
+	progress_bar_set(i);	/* aktualizacja paska */
+	......
+    }
+    progress_bar_free();
+}
+
+
+to samo ale z u¿yciem makra progress_loop:
+void czytaj()
+{
+    int i;
+
+    progress_loop(i, 10, 1024, "pasek postepu"){
+	.....
+    }
+}
+
+okno komunikatu:
+    dialog_box(tytul_okna,tekst_wyswietlany,nazwa przycisku lewego,nazwa_przycisku_prawego);
+    warto¶æ zwracana:
+    0 - zamkniecie zamykaczem okna
+    1 - zamkniecie lewym przyciskiem
+    2 - zamkniecie prawym przyciskiem
+
+przyciski s± opcjonalne
+
+/****************************************************************************************************/
+
+
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svnroot/geepro/!svn/ver/130/trunk/geepro/intl
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/geepro/!svn/ver/94/trunk/geepro/intl/wscript
+END
+lang_eng.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/150/trunk/geepro/intl/lang_eng.h
+END
+lang_pl.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/94/trunk/geepro/intl/lang_pl.h
+END

@@ -1,0 +1,99 @@
+/* $Revision: 1.1.1.1 $ */
+/* geepro - Willem eprom programmer for linux
+ * Copyright (C) 2006 Krzysztof Komarnicki
+ * Email: krzkomar@wp.pl
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version. See the file COPYING. 
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ *
+ */
+
+#define ADAPTER_51_IMG		0
+#define D_2716_WILLEM_IMG	1
+#define D_2716_PCB3_IMG		1
+#define D_2732_WILLEM_IMG	2
+#define D_2732_PCB3_IMG		2
+#define D_2764_WILLEM_IMG	3
+#define D_2764_PCB3_IMG		3
+#define D_27010_WILLEM_IMG	4
+#define D_27010_PCB3_IMG	4
+#define D_24CXX_PCB3_IMG	5
+#define D_24CXX_WILLEM_IMG	6
+#define D_25CXX_PCB3_IMG	7
+#define D_25CXX_WILLEM_IMG	8
+#define D_93XX_PCB3_IMG		9
+#define D_93XX_WILLEM_IMG	10
+#define PIC_18_PCB3_IMG		11
+#define PIC_18_WILLEM_IMG	12
+
+
+#define D_27128_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_27256_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_27512_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_27020_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_27040_WILLEM_IMG	D_27010_WILLEM_IMG
+
+#define D_28C65_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28C128_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28C256_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28C512_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28C010_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_28C020_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_28C040_WILLEM_IMG	D_27010_WILLEM_IMG
+
+#define D_28F64_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28F128_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28F256_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28F512_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_28F010_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_28F020_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_28F040_WILLEM_IMG	D_27010_WILLEM_IMG
+
+#define D_29F64_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_29F128_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_29F256_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_29F512_WILLEM_IMG	D_2764_WILLEM_IMG
+#define D_29F010_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_29F020_WILLEM_IMG	D_27010_WILLEM_IMG
+#define D_29F040_WILLEM_IMG	D_27010_WILLEM_IMG
+
+#define D_27128_PCB3_IMG	D_2764_PCB3_IMG
+#define D_27256_PCB3_IMG	D_2764_PCB3_IMG
+#define D_27512_PCB3_IMG	D_2764_PCB3_IMG
+#define D_27020_PCB3_IMG	D_27010_PCB3_IMG
+#define D_27040_PCB3_IMG	D_27010_PCB3_IMG
+
+#define D_28C65_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28C128_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28C256_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28C512_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28C010_PCB3_IMG	D_27010_PCB3_IMG
+#define D_28C020_PCB3_IMG	D_27010_PCB3_IMG
+#define D_28C040_PCB3_IMG	D_27010_PCB3_IMG
+
+#define D_28F64_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28F128_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28F256_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28F512_PCB3_IMG	D_2764_PCB3_IMG
+#define D_28F010_PCB3_IMG	D_27010_PCB3_IMG
+#define D_28F020_PCB3_IMG	D_27010_PCB3_IMG
+#define D_28F040_PCB3_IMG	D_27010_PCB3_IMG
+
+#define D_29F64_PCB3_IMG	D_2764_PCB3_IMG
+#define D_29F128_PCB3_IMG	D_2764_PCB3_IMG
+#define D_29F256_PCB3_IMG	D_2764_PCB3_IMG
+#define D_29F512_PCB3_IMG	D_2764_PCB3_IMG
+#define D_29F010_PCB3_IMG	D_27010_PCB3_IMG
+#define D_29F020_PCB3_IMG	D_27010_PCB3_IMG
+#define D_29F040_PCB3_IMG	D_27010_PCB3_IMG

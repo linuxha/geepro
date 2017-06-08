@@ -1,0 +1,7 @@
+#define EVERSION	"0.1"
+#define AUTORS	\
+"code - Krzysztof Komarnicki krzkomar@wp.pl",\
+"waf script - Ypatois",\
+"create project on sourceforge - uzi18"
+
+

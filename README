@@ -1,0 +1,28 @@
+= GEEPRO README FILE =
+
+
+== COMPILATION ==
+
+The programm geepro uses waf build tool.
+
+To compile geepro, do:
+
+./waf configure
+./waf build
+
+To compile and install geepro to some specified location, do:
+
+./waf configure --prefix=/usr/local
+./waf build
+./waf install
+
+== Dependency ==
+cairo (cairo-coloredemoji, cairo-dfb, cairo-git, cairo-infinality, cairo-infinality-lcdfilter, cairo-infinality-ultimate, cairo-infinality-ultimate-with-colored-emoji, cairo-minimal, cairo-nomesa, cairo-ubuntu) Debian - cairo dev
+gettext
+gtk3 (gtk3-aqd, gtk3-cosy, gtk3-donnatella, gtk3-light, gtk3-mushrooms, gtk3-nobroadway-nowayland-nocolord, gtk3-optional-csd, gtk3-typeahead, gtk3-ubuntu, gtk3-ubuntu-multilib) Debian - libgtk-3.0 dev
+intltool
+libxml2 (libxml2-linenum)
+perl (perl-fake)
+pkg-config (pkgconf-git, pkgconf)
+Required by (0)
+

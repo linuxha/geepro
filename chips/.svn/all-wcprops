@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips
+END
+modules.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/147/trunk/geepro/chips/modules.h
+END
+prom.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/prom.cpp
+END
+93Cxx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/93Cxx.cpp
+END
+mcs48.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/156/trunk/geepro/chips/mcs48.cpp
+END
+signatures.sig
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/geepro/!svn/ver/154/trunk/geepro/chips/signatures.sig
+END
+exampl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/exampl.cpp
+END
+25xx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/155/trunk/geepro/chips/25xx.cpp
+END
+24Cxx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/24Cxx.cpp
+END
+27xx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/27xx.cpp
+END
+mcs51.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/geepro/!svn/ver/147/trunk/geepro/chips/mcs51.cpp
+END
+28xx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/28xx.cpp
+END
+29xx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/29xx.cpp
+END
+wscript
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/geepro/!svn/ver/154/trunk/geepro/chips/wscript
+END
+hub_lpc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/geepro/!svn/ver/129/trunk/geepro/chips/hub_lpc.cpp
+END

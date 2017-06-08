@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="drivers.css" ?>
+<!DOCTYPE gui SYSTEM "drivers.dtd">
+
+<gui>
+
+<info>
+    <frame align="50, 50" >
+	<vbox>
+	    <description>Parallel program cable for SPI</description>
+	    <image src="pixmaps/stk200_pic.jpg"/>
+	    <image src="pixmaps/stk200_ph.jpg"/>
+	</vbox>
+    </frame>
+</info>
+
+<notebook name="HW Test">
+    <table dim="2,2">
+	<frame  shadow="etched_in" expand="true" fillx="true" pos="0,1, 0,1">
+	    <table dim="5, 3" fillx="true">
+		<chbutton id="MOSI" pos="0,2, 0,1" label="1-MOSI" fillx="true" spacex="5" />
+		<chbutton id="LED" pos="0,2, 1,2" label="3-LED#" fillx="true" spacex="5" />
+		<chbutton id="RST" pos="0,2, 2,3" label="5-RST" fillx="true" spacex="5" spacey="5" />		
+		<chbutton id="SCK" pos="0,2, 3,4" label="7-SCK" fillx="true" spacex="5" spacey="5" />		
+		<entry id="MISO" editable="false" pos="0,1, 4,5" fillx="false" spacex="5" size="5"/>
+		<button label="9-MISO" pos="1,2, 4,5" fillx="true" id="MISO_BT"/>
+		<label text="SET" pos="2,3, 0,1" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 1,2" fillx="true" align="0, 0" spacex="10" />				
+		<label text="SET" pos="2,3, 2,3" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 3,4" fillx="true" align="0, 0" spacex="10" />		
+		<label text="GET" pos="2,3, 4,5" fillx="true" align="0, 0" spacex="10" />
+	    </table>	    
+	</frame>
+	    <image src="pixmaps/stk200_ph.jpg" pos="1, 2, 0,1"/>
+	<image src="pixmaps/stk200_sch.jpg" pos="0,2, 1,2"/>
+    </table>
+</notebook>
+
+</gui>
+
+

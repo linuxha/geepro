@@ -1,0 +1,64 @@
+/*
+    bq2040 example stencil file
+*/
+
+device = {
+    tree = "/Battery charger/bq";
+    description = "Battery charger bq2040 memory map";
+    byte_order = "big endian";
+    name = "bq2040";
+};
+
+entries = {
+    entry[0] = {
+	name = "pierwszy";
+	type = integer;
+	editable = yes;
+	default = "254";
+	minimum = 1;
+	maximum = 62;
+	clear = yes;
+	length = 8;
+	names = "ala,ma,kota";
+	values = "1,2,3";
+	offset = 2000;
+	range = 123;
+	seconds = yes;
+	mode12h = no;
+    };
+    entry[1] = {
+	name = "drugi";
+	name = "pierwszy";
+	type = string;
+	editable = yes;
+	default = "ala ma kota";
+	minimum = 1;
+	maximum = 62;
+	clear = yes;
+	length = 8;
+	names = "ala,ma,kota";
+	values = "1,2,3";
+	offset = 2000;
+	range = 123;
+	seconds = yes;
+	mode12h = no;
+    };
+    entry[2] = {
+	name = "trzeci";
+	name = "pierwszy";
+	type = bits;
+	editable = yes;
+	default = "ala ma kota";
+	minimum = 1;
+	maximum = 62;
+	clear = yes;
+	length = 8;
+	names = "ala,ma,kota";
+	values = "1,2,3";
+	offset = 2000;
+	range = 123;
+	seconds = yes;
+	mode12h = no;
+    };
+};
+

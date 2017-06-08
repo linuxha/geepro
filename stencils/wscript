@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# pixmaps
+def build(bld):
+  print('→ building stencils')
+  stencils=["bq2040.stc"]
+
+  for stc in stencils:
+    bld.copy_to_build(geefile=stc)
+
+  bld.install_files("${PREFIX}/share/geepro/stencils",stencils)

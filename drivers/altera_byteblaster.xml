@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/css" href="drivers.css" ?>
+<!DOCTYPE gui SYSTEM "drivers.dtd">
+
+<gui>
+
+<info>
+    <frame align="50, 50" >
+	<vbox>
+	    <description>Altera byteblaster</description>
+	    <image src="pixmaps/byteblaster_pic.jpg"/>
+	</vbox>
+    </frame>
+</info>
+
+<notebook name="HW Test">
+    <table dim="2,2">
+	<frame  shadow="etched_in" expand="true" fillx="true" pos="0,1, 0,1">
+	    <table dim="5, 3" fillx="true">
+		<chbutton id="TDI" pos="0,2, 0,1" label="TDI" fillx="true" spacex="5" />
+		<chbutton id="TMS" pos="0,2, 1,2" label="TMS" fillx="true" spacex="5" spacey="5" />		
+		<chbutton id="TCK" pos="0,2, 2,3" label="TCK" fillx="true" spacex="5" spacey="5" />		
+		<entry id="TDO" editable="false" pos="0,1, 3,4" fillx="false" spacex="5" size="5"/>
+		<button label="TDO" pos="1,2, 3,4" fillx="true" id="TDO_BT"/>
+		<entry id="nSTAT" editable="false" pos="0,1, 4,5" fillx="false" spacex="5" size="5"/>
+		<button label="nSTAT" pos="1,2, 4,5" fillx="true" id="nSTAT_BT"/>
+		<label text="SET" pos="2,3, 0,1" fillx="true" align="0, 0" spacex="10" />		
+		<label text="SET" pos="2,3, 1,2" fillx="true" align="0, 0" spacex="10" />				
+		<label text="SET" pos="2,3, 2,3" fillx="true" align="0, 0" spacex="10" />		
+		<label text="GET" pos="2,3, 3,4" fillx="true" align="0, 0" spacex="10" />		
+		<label text="GET" pos="2,3, 4,5" fillx="true" align="0, 0" spacex="10" />
+	    </table>	    
+	</frame>
+	<image src="pixmaps/byteblaster_sch.jpg" pos="0,2, 1,2"/>
+    </table>
+</notebook>
+
+</gui>
+
+

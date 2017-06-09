@@ -36,9 +36,9 @@ gettext
 
 ## License
 GNU GENERAL PUBLIC LICENSE
-                       Version 2, June 1991
+Version 2, June 1991
 
 ## History
-I've copied down the  0.0.4 GeePro tar ball from SourceForge. I've not changed much but I have updated the Readme file to reflect the dependencies I've found. I've also run ./waf distclean and removed the .svn directory. I'll share the Readme with the existing project so others can find it too.
+I've copied down the 0.0.4 GeePro tar ball from SourceForge. I've not changed much but I have updated the Readme file to reflect the dependencies I've found. I've also run ./waf distclean and removed the .svn directory. I'll share the Readme with the existing project so others can find it too.
 
 [GeePro original repos](https://sourceforge.net/projects/geepro/ "GeePro home page on SourceForge")

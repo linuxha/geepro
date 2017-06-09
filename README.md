@@ -26,13 +26,13 @@ To compile and install geepro to some specified location, do:
 ```
 
 ## Dependency
-I found this dependency list on the Arch Linux GeePro page. I've modified it for the Debian package names. I'd expect similar dependencies for Ubuntu and any other Debian/Ubuntu based Linux Distribution.
+I found this dependency list on the (Arch Linux GeePro page)[https://aur.archlinux.org/packages/geepro/]. I've modified it for the Debian package names. I'd expect similar dependencies for Ubuntu and any other Debian/Ubuntu based Linux Distribution.
 
-* **cairo** (cairo-coloredemoji, cairo-dfb, cairo-git, cairo-infinality, cairo-infinality-lcdfilter, cairo-infinality-ultimate, cairo-infinality-ultimate-with-colored-emoji, cairo-minimal, cairo-nomesa, cairo-ubuntu) Debian - cairo dev
-gettext
+* **cairo** (cairo-coloredemoji, cairo-dfb, cairo-git, cairo-infinality, cairo-infinality-lcdfilter, cairo-infinality-ultimate, cairo-infinality-ultimate-with-colored-emoji, cairo-minimal, cairo-nomesa, cairo-ubuntu) Debian - libcairo2-dev
+* **gettext**
 * **gtk3** (gtk3-aqd, gtk3-cosy, gtk3-donnatella, gtk3-light, gtk3-mushrooms, gtk3-nobroadway-nowayland-nocolord, gtk3-optional-csd, gtk3-typeahead, gtk3-ubuntu, gtk3-ubuntu-multilib) Debian - libgtk-3.0 dev
 * **intltool**
-* **libxml2** (libxml2-linenum)
+* **libxml2** (libxml2-linenum) Debian - libxml2-gev
 * **perl** (perl-fake)
 * **pkg-config** (pkgconf-git, pkgconf)
 

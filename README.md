@@ -4,20 +4,26 @@
 
 The programm geepro uses [waf](https://github.com/waf-project/waf "WAF on Github") build tool.
 
+To start cleanly:
+
+```shell
+./waf distclean
+```
+
 To compile geepro, do:
 
-`./waf configure`
-`./waf build`
+```shell
+./waf configure
+./waf build
+```
 
 To compile and install geepro to some specified location, do:
 
-`./waf configure --prefix=/usr/local`
-`./waf build`
-`./waf install`
-
-To start cleanly:
-
-`./waf distclean`
+```shell
+./waf configure --prefix=/usr/local
+./waf build
+./waf install
+```
 
 ## Dependency
 I found this dependency list on the Arch Linux GeePro page. I've modified it for the Debian package names. I'd expect similar dependencies for Ubuntu and any other Debian/Ubuntu based Linux Distribution.

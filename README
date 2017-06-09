@@ -1,24 +1,29 @@
 = GEEPRO README FILE =
 
-
 == COMPILATION ==
 
 The programm geepro uses waf build tool.
 
+To start cleanly:
+
+```shell
+./waf distclean
+```
+
 To compile geepro, do:
 
+```shell
 ./waf configure
 ./waf build
+```
 
 To compile and install geepro to some specified location, do:
 
+```shell
 ./waf configure --prefix=/usr/local
 ./waf build
 ./waf install
-
-To start cleanly:
-
-./waf distclean
+```
 
 == Dependency ==
 
